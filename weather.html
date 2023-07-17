@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Today</title>
+
+    <!-- Style Sheet  -->
+    <link rel="stylesheet" href="weather.css" />
+  </head>
+
+  <body>
+    <!-- Header Section  -->
+    <header>
+      <nav>
+        <div class="left">
+          <ul>
+            <li>
+              <a
+                href="#"
+                id="todayLink"
+                class="active"
+                onclick="toggleWeather('today')"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#" id="nextDayLink" onclick="toggleWeather('nextDay')"
+                >Forecast</a
+              >
+            </li>
+            <li><a href="#faqs">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="right">
+          <form role="search">
+            <input id="city" type="search" name="search" placeholder="search" />
+            <button type="submit" id="submit" onclick="toggleWeather('today')">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Today Weather  -->
+      <!-- First Section  -->
+      <div id="day_0">
+        <section>
+          <div class="first">
+            <div class="left">
+              <div class="city-name">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  fill="currentColor"
+                  class="bi bi-geo-alt-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                  />
+                </svg>
+                <span id="cityName">New Delhi</span> :
+                <span class="date" id="date_0"></span>
+              </div>
+              <p class="temp"><span id="temp">17</span> &#8451;</p>
+
+              <div class="bottom">
+                <p>Max : <span id="max_temp"></span> &#8451;</p>
+                <p>Min : <span id="min_temp"></span> &#8451;</p>
+                <p>Feels Like : <span id="feels_like"></span> &#8451;</p>
+              </div>
+            </div>
+            <div class="right">
+              <img id="cloud_icon" src="" alt="cloud Condition" />
+              <p class="cloud" id="cloud_text">Mostly Cloud</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Second Section -->
+        <section>
+          <div class="second">
+            <!-- Air Quality Box -->
+            <div class="box">
+              <p class="heading">Air Quality</p>
+              <img src="media/air.png" alt="Air Logo" width="130" />
+              <p class="data">
+                Humidity :
+                <span id="humidity" class="value"> 10</span> %
+              </p>
+              <p class="data">
+                Visibility : <span id="wind_vis" class="value">5 </span> km
+              </p>
+              <p class="data">
+                Uv Index : <span id="uv_index" class="value">1</span>
+              </p>
+            </div>
+
+            <!-- Rain Box -->
+            <div class="box">
+              <p class="heading">Rain Chance</p>
+              <img src="media/rain.png" alt="Rain Logo" width="130" />
+              <p class="data">
+                Rain Chance : <span class="value" id="rain_chance"> 10</span>%
+              </p>
+              <p class="data">
+                Possibility : <span class="value" id="rain_today">Yes </span>
+              </p>
+              <p class="data">
+                Cloud Cover : <span class="value" id="cloud_pct">50</span>%
+              </p>
+            </div>
+
+            <!-- Sun Box -->
+            <div class="box">
+              <p class="heading">Sun Timing</p>
+              <img src="media/sun.png" alt="Sun Logo" width="90" />
+              <p class="data">
+                Arise : <span class="value" id="sun_arise"> 6am</span>
+              </p>
+              <p class="data">
+                Set : <span class="value" id="sun_set">5pm</span>
+              </p>
+            </div>
+
+            <!-- Pressure Box -->
+            <div class="box">
+              <p class="heading">Pressure & Wind</p>
+              <img src="media/presure.png" alt="Pressure Logo" width="110" />
+              <p class="data">
+                Wind Speed : <span id="wind_speed" class="value">19</span> km/h
+              </p>
+              <p class="data">
+                Direction : <span id="wind_dir" class="value">S</span>
+              </p>
+              <p class="data">
+                Pressure : <span id="pressure" class="value">10</span> hpa
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Tommorow Weather day - 1  -->
+      <div id="day_1">
+        <section>
+          <div class="first">
+            <div class="left">
+              <div class="city-name">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  fill="currentColor"
+                  class="bi bi-geo-alt-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                  />
+                </svg>
+                <span id="cityName_1">New Delhi</span> :
+                <span class="date" id="date_1"></span>
+              </div>
+              <p class="temp"><span id="temp_1">17</span> &#8451;</p>
+
+              <div class="bottom">
+                <p>Max : <span id="max_temp_1"></span> &#8451;</p>
+                <p>Min : <span id="min_temp_1"></span> &#8451;</p>
+                <p>Feels Like : <span id="feels_like_1"></span> &#8451;</p>
+              </div>
+            </div>
+            <div class="right">
+              <img id="cloud_icon_1" src="" alt="cloud Condition" />
+              <p class="cloud" id="cloud_text_1">Mostly Cloud</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Second Section -->
+        <section>
+          <div class="second">
+            <!-- Air Quality Box -->
+            <div class="box">
+              <p class="heading">Air Quality</p>
+              <img src="media/air.png" alt="Air Logo" width="130" />
+              <p class="data">
+                Humidity :
+                <span id="humidity_1" class="value"> 10</span> %
+              </p>
+              <p class="data">
+                Visibility : <span id="wind_vis_1" class="value">5 </span> km
+              </p>
+              <p class="data">
+                Uv Index : <span id="uv_index_1" class="value">1</span>
+              </p>
+            </div>
+
+            <!-- Rain Box -->
+            <div class="box">
+              <p class="heading">Rain Chance</p>
+              <img src="media/rain.png" alt="Rain Logo" width="130" />
+              <p class="data">
+                Rain Chance : <span class="value" id="rain_chance_1"> 10</span>%
+              </p>
+              <p class="data">
+                Possibility : <span class="value" id="rain_today_1">Yes </span>
+              </p>
+              <p class="data">
+                Cloud Cover : <span class="value" id="cloud_pct_1">50</span>%
+              </p>
+            </div>
+
+            <!-- Sun Box -->
+            <div class="box">
+              <p class="heading">Sun Timing</p>
+              <img src="media/sun.png" alt="Sun Logo" width="90" />
+              <p class="data">
+                Arise : <span class="value" id="sun_arise_1"> 6am</span>
+              </p>
+              <p class="data">
+                Set : <span class="value" id="sun_set_1">5pm</span>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Tommorow Weather day - 2  -->
+      <div id="day_2">
+        <section>
+          <div class="first">
+            <div class="left">
+              <div class="city-name">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  fill="currentColor"
+                  class="bi bi-geo-alt-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                  />
+                </svg>
+                <span id="cityName_2">New Delhi</span> :
+                <span class="date" id="date_2"></span>
+              </div>
+              <p class="temp"><span id="temp_2">17</span> &#8451;</p>
+
+              <div class="bottom">
+                <p>Max : <span id="max_temp_2"></span> &#8451;</p>
+                <p>Min : <span id="min_temp_2"></span> &#8451;</p>
+                <p>Feels Like : <span id="feels_like_2"></span> &#8451;</p>
+              </div>
+            </div>
+            <div class="right">
+              <img id="cloud_icon_2" src="" alt="cloud Condition" />
+              <p class="cloud" id="cloud_text_2">Mostly Cloud</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Second Section -->
+        <section>
+          <div class="second">
+            <!-- Air Quality Box -->
+            <div class="box">
+              <p class="heading">Air Quality</p>
+              <img src="media/air.png" alt="Air Logo" width="130" />
+              <p class="data">
+                Humidity :
+                <span id="humidity_2" class="value"> 10</span> %
+              </p>
+              <p class="data">
+                Visibility : <span id="wind_vis_2" class="value">5 </span> km
+              </p>
+              <p class="data">
+                Uv Index : <span id="uv_index_2" class="value">1</span>
+              </p>
+            </div>
+
+            <!-- Rain Box -->
+            <div class="box">
+              <p class="heading">Rain Chance</p>
+              <img src="media/rain.png" alt="Rain Logo" width="130" />
+              <p class="data">
+                Rain Chance : <span class="value" id="rain_chance_2"> 10</span>%
+              </p>
+              <p class="data">
+                Possibility : <span class="value" id="rain_today_2">Yes </span>
+              </p>
+              <p class="data">
+                Cloud Cover : <span class="value" id="cloud_pct_2">50</span>%
+              </p>
+            </div>
+
+            <!-- Sun Box -->
+            <div class="box">
+              <p class="heading">Sun Timing</p>
+              <img src="media/sun.png" alt="Sun Logo" width="90" />
+              <p class="data">
+                Arise : <span class="value" id="sun_arise_2"> 6am</span>
+              </p>
+              <p class="data">
+                Set : <span class="value" id="sun_set_2">5pm</span>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <hr />
+
+      <!-- FAQs Section  -->
+      <section id="faqs">
+        <h1>FAQs</h1>
+
+        <div class="question-box">
+          <details>
+            <summary class="question">
+              How accurate is your weather forecast ?
+            </summary>
+            <div class="answer">
+              Our website utilizes advanced forecasting models and data from
+              reliable sources to provide highly accurate weather forecasts.
+            </div>
+          </details>
+        </div>
+
+        <div class="question-box">
+          <details>
+            <summary class="question">
+              Can I view the weather forecast for multiple locations ?
+            </summary>
+            <div class="answer">
+              Yes, our website allows you to easily check the weather forecast
+              for multiple locations worldwide.
+            </div>
+          </details>
+        </div>
+
+        <div class="question-box">
+          <details>
+            <summary class="question">
+              Does your website provide real-time weather updates ?
+            </summary>
+            <div class="answer">
+              Absolutely! Our app continuously fetches the latest weather data,
+              ensuring you receive real-time updates on temperature, humidity,
+              precipitation, cloud and more.
+            </div>
+          </details>
+        </div>
+        <div class="question-box">
+          <details>
+            <summary class="question">
+              Can I access historical weather data through your website ?
+            </summary>
+            <div class="answer">
+              Unfortunately, our website currently focuses on providing current
+              and future weather forecasts and does not support historical
+              weather data.
+            </div>
+          </details>
+        </div>
+
+        <div class="question-box">
+          <details>
+            <summary class="question">
+              Can I check the sunrise and sunset times on your website ?
+            </summary>
+            <div class="answer">
+              Yes, our website displays accurate sunrise and sunset times for
+              your location, helping you plan your day accordingly.
+            </div>
+          </details>
+        </div>
+        <div class="question-box">
+          <details>
+            <summary class="question">
+              Is your weather website free to use, or does it require a
+              subscription ?
+            </summary>
+            <div class="answer">
+              Our weather website is absolutely free , you can access all
+              weather information.
+            </div>
+          </details>
+        </div>
+        <div class="question-box">
+          <details>
+            <summary class="question">
+              Can I view the weather forecast for international locations ?
+            </summary>
+            <div class="answer">
+              Yes, our website provides weather forecasts for international
+              locations across the globe.
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <!-- Java Script  -->
+    <script src="weather.js"></script>
+  </body>
+</html>
