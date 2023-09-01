@@ -2,10 +2,10 @@ body {
   margin: 0;
   background-color: #eee;
   padding: 0;
-  background: linear-gradient(90deg, rgb(0, 153, 255) 0%, rgb(191, 0, 255) 100%);
-  background: linear-gradient(90deg, hsla(307, 59%, 66%, 1) 0%, hsla(297, 56%, 45%, 1) 0%, hsla(307, 100%, 77%, 1) 0%, hsla(192, 81%, 59%, 1) 100%);
+  background: linear-gradient(90deg, rgba(0, 153, 255, 0.744) 0%, rgb(191, 0, 255) 100%);
+  /* background: linear-gradient(90deg, hsla(307, 59%, 66%, 1) 0%, hsla(297, 56%, 45%, 1) 0%, hsla(307, 100%, 77%, 1) 0%, hsla(192, 81%, 59%, 1) 100%);
 
-  background: linear-gradient(90deg, hsla(307, 59%, 66%, 1) 0%, hsla(297, 56%, 45%, 1) 0%, hsla(307, 89%, 82%, 1) 0%, hsla(262, 61%, 64%, 1) 100%);
+  background: linear-gradient(90deg, hsla(307, 59%, 66%, 1) 0%, hsla(297, 56%, 45%, 1) 0%, hsla(307, 89%, 82%, 1) 0%, hsla(262, 61%, 64%, 1) 100%); */
 }
 
 
@@ -176,15 +176,6 @@ section h1 {
   margin-left: auto;
 }
 
-hr {
-  margin: 40px 0;
-    height: 7.5px;
-    border: none;
-    background-color: rgb(22 21 21);
-    background-color: rgb(215 110 255);
-}
-
-
 
 /* FAQs Section  */
 #faqs {
@@ -199,24 +190,31 @@ padding:20px 0;
 }
 
 .question-box {
+  font-size: 1.3rem;
+  color: #1c1c1e;
   background-color: white;
-  border: 2px solid white;
-  margin: 30px auto;
+  border: 2px solid lightgray;
   border-radius: 0.5rem;
+  margin: 20px auto;
+  padding: 1rem;
   width: 70%;
-  box-shadow: 0 2px 5px 0px #d300ff;
-  box-sizing: border-box;
 }
 
 
 .question {
-  padding: 1.25rem 1.25rem 1rem 1.25rem;
-  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .answer {
-  font-size: 1.22rem;
-  padding: 0.5rem 1.25rem 1.25rem 2.5rem;
-  border-top: 1px solid lightgray;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s linear;
+}
 
+.footer {
+  font-size: 1.4rem;
+  background: #ddd !important;
+  color: #141313;
+  text-align: center;
+  padding: 50px 0;
 }

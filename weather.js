@@ -134,10 +134,10 @@ const getWeather = (city) => {
 };
 
 // Add with Search Button
-submit.addEventListener("click", (e) => {
+submit.addEventListener("click", function (e) {
   e.preventDefault();
   getWeather(city.value);
-});
+})
 
 // Default Weather is "New Delhi"
 getWeather("New Delhi");
@@ -153,12 +153,38 @@ function toggleWeather(section) {
   if (section === "today") {
     todaySection.style.display = "block";
     nextDaySection.style.display = "none";
-     todayLink.classList.add("active");
-     nextDayLink.classList.remove("active");
+    todayLink.classList.add("active");
+    nextDayLink.classList.remove("active");
   } else if (section === "nextDay") {
     todaySection.style.display = "none";
     nextDaySection.style.display = "block";
-     todayLink.classList.remove("active");
-     nextDayLink.classList.add("active");
+    todayLink.classList.remove("active");
+    nextDayLink.classList.add("active");
+  }
+}
+
+
+// Smooth Faqs
+let currentAnswerId = null;
+
+function toggleAnswer(id) {
+  const answerElement = document.getElementById(`faq-answer-${id}`);
+  if (currentAnswerId !== id) {
+    hideCurrentAnswer();
+    // Get the scroll height of the answer content and set it as the max-height
+    answerElement.style.maxHeight = answerElement.scrollHeight + "px";
+    currentAnswerId = id;
+  } else {
+    hideCurrentAnswer();
+  }
+}
+
+function hideCurrentAnswer() {
+  if (currentAnswerId !== null) {
+    const currentAnswerElement = document.getElementById(
+      `faq-answer-${currentAnswerId}`
+    );
+    currentAnswerElement.style.maxHeight = null;
+    currentAnswerId = null;
   }
 }

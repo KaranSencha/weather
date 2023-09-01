@@ -322,91 +322,87 @@
         <h1>FAQs</h1>
 
         <div class="question-box">
-          <details>
-            <summary class="question">
-              How accurate is your weather forecast ?
-            </summary>
-            <div class="answer">
-              Our website utilizes advanced forecasting models and data from
-              reliable sources to provide highly accurate weather forecasts.
-            </div>
-          </details>
+          <div class="question" onclick="toggleAnswer(1)">
+            How accurate is your weather forecast ?
+          </div>
+          <div class="answer" id="faq-answer-1">
+            Our website utilizes advanced forecasting models and data from
+            reliable sources to provide highly accurate weather forecasts.
+          </div>
         </div>
 
         <div class="question-box">
-          <details>
-            <summary class="question">
-              Can I view the weather forecast for multiple locations ?
-            </summary>
-            <div class="answer">
-              Yes, our website allows you to easily check the weather forecast
-              for multiple locations worldwide.
-            </div>
-          </details>
+          <div class="question" onclick="toggleAnswer(2)">
+            Can I view the weather forecast for multiple locations ?
+          </div>
+          <div class="answer" id="faq-answer-2">
+            Yes, our website allows you to easily check the weather forecast for
+            multiple locations worldwide.
+          </div>
         </div>
 
         <div class="question-box">
-          <details>
-            <summary class="question">
-              Does your website provide real-time weather updates ?
-            </summary>
-            <div class="answer">
-              Absolutely! Our app continuously fetches the latest weather data,
-              ensuring you receive real-time updates on temperature, humidity,
-              precipitation, cloud and more.
-            </div>
-          </details>
-        </div>
-        <div class="question-box">
-          <details>
-            <summary class="question">
-              Can I access historical weather data through your website ?
-            </summary>
-            <div class="answer">
-              Unfortunately, our website currently focuses on providing current
-              and future weather forecasts and does not support historical
-              weather data.
-            </div>
-          </details>
+          <div class="question" onclick="toggleAnswer(3)">
+            Does your website provide real-time weather updates ?
+          </div>
+          <div class="answer" id="faq-answer-3">
+            Absolutely! Our app continuously fetches the latest weather data,
+            ensuring you receive real-time updates on temperature, humidity,
+            precipitation, cloud and more.
+          </div>
         </div>
 
         <div class="question-box">
-          <details>
-            <summary class="question">
-              Can I check the sunrise and sunset times on your website ?
-            </summary>
-            <div class="answer">
-              Yes, our website displays accurate sunrise and sunset times for
-              your location, helping you plan your day accordingly.
-            </div>
-          </details>
+          <div class="question" onclick="toggleAnswer(4)">
+            Can I access historical weather data through your website ?
+          </div>
+          <div class="answer" id="faq-answer-4">
+            Unfortunately, our website currently focuses on providing current
+            and future weather forecasts and does not support historical weather
+            data.
+          </div>
         </div>
+
         <div class="question-box">
-          <details>
-            <summary class="question">
-              Is your weather website free to use, or does it require a
-              subscription ?
-            </summary>
-            <div class="answer">
-              Our weather website is absolutely free , you can access all
-              weather information.
-            </div>
-          </details>
+          <div class="question" onclick="toggleAnswer(5)">
+            Can I check the sunrise and sunset times on your website ?
+          </div>
+          <div class="answer" id="faq-answer-5">
+            Yes, our website displays accurate sunrise and sunset times for your
+            location, helping you plan your day accordingly.
+          </div>
         </div>
+
         <div class="question-box">
-          <details>
-            <summary class="question">
-              Can I view the weather forecast for international locations ?
-            </summary>
-            <div class="answer">
-              Yes, our website provides weather forecasts for international
-              locations across the globe.
-            </div>
-          </details>
+          <div class="question" onclick="toggleAnswer(6)">
+            Is your weather website free to use, or does it require a
+            subscription ?
+          </div>
+          <div class="answer" id="faq-answer-6">
+            Our weather website is absolutely free , you can access all weather
+            information.
+          </div>
+        </div>
+
+        <div class="question-box">
+          <div class="question" onclick="toggleAnswer(7)">
+            Can I view the weather forecast for international locations ?
+          </div>
+          <div class="answer" id="faq-answer-7">
+            Yes, our website provides weather forecasts for international
+            locations across the globe.
+          </div>
         </div>
       </section>
     </main>
 
+    
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer">
+        copyright © 2023 <a href="https://karansencha.com" target="_blank" title="Founder & Owner">Karan Sencha</a> | All rights reserved.
+      </div>
+    </footer>
     <!-- Java Script  -->
     <script src="weather.js"></script>
   </body>
