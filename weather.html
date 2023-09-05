@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Today</title>
 
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google Icon  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <!-- Style Sheet  -->
     <link rel="stylesheet" href="weather.css" />
   </head>
@@ -16,18 +27,10 @@
         <div class="left">
           <ul>
             <li>
-              <a
-                href="#"
-                id="todayLink"
-                class="active"
-                onclick="toggleWeather('today')"
-                >Home</a
-              >
+              <a href="#" id="todayLink" class="active" onclick="toggleWeather('today')">Home </a>
             </li>
             <li>
-              <a href="#" id="nextDayLink" onclick="toggleWeather('nextDay')"
-                >Forecast</a
-              >
+              <a href="#" id="nextDayLink" onclick="toggleWeather('nextDay')">Forecast</a>
             </li>
             <li><a href="#faqs">FAQs</a></li>
           </ul>
@@ -36,9 +39,7 @@
         <div class="right">
           <form role="search">
             <input id="city" type="search" name="search" placeholder="search" />
-            <button type="submit" id="submit" onclick="toggleWeather('today')">
-              Search
-            </button>
+            <button type="submit" id="submit" onclick="toggleWeather('today')">Search</button>
           </form>
         </div>
       </nav>
@@ -93,54 +94,34 @@
                 Humidity :
                 <span id="humidity" class="value"> 10</span> %
               </p>
-              <p class="data">
-                Visibility : <span id="wind_vis" class="value">5 </span> km
-              </p>
-              <p class="data">
-                Uv Index : <span id="uv_index" class="value">1</span>
-              </p>
+              <p class="data">Visibility : <span id="wind_vis" class="value">5 </span> km</p>
+              <p class="data">Uv Index : <span id="uv_index" class="value">1</span></p>
             </div>
 
             <!-- Rain Box -->
             <div class="box">
               <p class="heading">Rain Chance</p>
               <img src="media/rain.png" alt="Rain Logo" width="130" />
-              <p class="data">
-                Rain Chance : <span class="value" id="rain_chance"> 10</span>%
-              </p>
-              <p class="data">
-                Possibility : <span class="value" id="rain_today">Yes </span>
-              </p>
-              <p class="data">
-                Cloud Cover : <span class="value" id="cloud_pct">50</span>%
-              </p>
+              <p class="data">Rain Chance : <span class="value" id="rain_chance"> 10</span>%</p>
+              <p class="data">Possibility : <span class="value" id="rain_today">Yes </span></p>
+              <p class="data">Cloud Cover : <span class="value" id="cloud_pct">50</span>%</p>
             </div>
 
             <!-- Sun Box -->
             <div class="box">
               <p class="heading">Sun Timing</p>
               <img src="media/sun.png" alt="Sun Logo" width="90" />
-              <p class="data">
-                Arise : <span class="value" id="sun_arise"> 6am</span>
-              </p>
-              <p class="data">
-                Set : <span class="value" id="sun_set">5pm</span>
-              </p>
+              <p class="data">Arise : <span class="value" id="sun_arise"> 6am</span></p>
+              <p class="data">Set : <span class="value" id="sun_set">5pm</span></p>
             </div>
 
             <!-- Pressure Box -->
             <div class="box">
               <p class="heading">Pressure & Wind</p>
               <img src="media/presure.png" alt="Pressure Logo" width="110" />
-              <p class="data">
-                Wind Speed : <span id="wind_speed" class="value">19</span> km/h
-              </p>
-              <p class="data">
-                Direction : <span id="wind_dir" class="value">S</span>
-              </p>
-              <p class="data">
-                Pressure : <span id="pressure" class="value">10</span> hpa
-              </p>
+              <p class="data">Wind Speed : <span id="wind_speed" class="value">19</span> km/h</p>
+              <p class="data">Direction : <span id="wind_dir" class="value">S</span></p>
+              <p class="data">Pressure : <span id="pressure" class="value">10</span> hpa</p>
             </div>
           </div>
         </section>
@@ -193,39 +174,25 @@
                 Humidity :
                 <span id="humidity_1" class="value"> 10</span> %
               </p>
-              <p class="data">
-                Visibility : <span id="wind_vis_1" class="value">5 </span> km
-              </p>
-              <p class="data">
-                Uv Index : <span id="uv_index_1" class="value">1</span>
-              </p>
+              <p class="data">Visibility : <span id="wind_vis_1" class="value">5 </span> km</p>
+              <p class="data">Uv Index : <span id="uv_index_1" class="value">1</span></p>
             </div>
 
             <!-- Rain Box -->
             <div class="box">
               <p class="heading">Rain Chance</p>
               <img src="media/rain.png" alt="Rain Logo" width="130" />
-              <p class="data">
-                Rain Chance : <span class="value" id="rain_chance_1"> 10</span>%
-              </p>
-              <p class="data">
-                Possibility : <span class="value" id="rain_today_1">Yes </span>
-              </p>
-              <p class="data">
-                Cloud Cover : <span class="value" id="cloud_pct_1">50</span>%
-              </p>
+              <p class="data">Rain Chance : <span class="value" id="rain_chance_1"> 10</span>%</p>
+              <p class="data">Possibility : <span class="value" id="rain_today_1">Yes </span></p>
+              <p class="data">Cloud Cover : <span class="value" id="cloud_pct_1">50</span>%</p>
             </div>
 
             <!-- Sun Box -->
             <div class="box">
               <p class="heading">Sun Timing</p>
               <img src="media/sun.png" alt="Sun Logo" width="90" />
-              <p class="data">
-                Arise : <span class="value" id="sun_arise_1"> 6am</span>
-              </p>
-              <p class="data">
-                Set : <span class="value" id="sun_set_1">5pm</span>
-              </p>
+              <p class="data">Arise : <span class="value" id="sun_arise_1"> 6am</span></p>
+              <p class="data">Set : <span class="value" id="sun_set_1">5pm</span></p>
             </div>
           </div>
         </section>
@@ -278,39 +245,25 @@
                 Humidity :
                 <span id="humidity_2" class="value"> 10</span> %
               </p>
-              <p class="data">
-                Visibility : <span id="wind_vis_2" class="value">5 </span> km
-              </p>
-              <p class="data">
-                Uv Index : <span id="uv_index_2" class="value">1</span>
-              </p>
+              <p class="data">Visibility : <span id="wind_vis_2" class="value">5 </span> km</p>
+              <p class="data">Uv Index : <span id="uv_index_2" class="value">1</span></p>
             </div>
 
             <!-- Rain Box -->
             <div class="box">
               <p class="heading">Rain Chance</p>
               <img src="media/rain.png" alt="Rain Logo" width="130" />
-              <p class="data">
-                Rain Chance : <span class="value" id="rain_chance_2"> 10</span>%
-              </p>
-              <p class="data">
-                Possibility : <span class="value" id="rain_today_2">Yes </span>
-              </p>
-              <p class="data">
-                Cloud Cover : <span class="value" id="cloud_pct_2">50</span>%
-              </p>
+              <p class="data">Rain Chance : <span class="value" id="rain_chance_2"> 10</span>%</p>
+              <p class="data">Possibility : <span class="value" id="rain_today_2">Yes </span></p>
+              <p class="data">Cloud Cover : <span class="value" id="cloud_pct_2">50</span>%</p>
             </div>
 
             <!-- Sun Box -->
             <div class="box">
               <p class="heading">Sun Timing</p>
               <img src="media/sun.png" alt="Sun Logo" width="90" />
-              <p class="data">
-                Arise : <span class="value" id="sun_arise_2"> 6am</span>
-              </p>
-              <p class="data">
-                Set : <span class="value" id="sun_set_2">5pm</span>
-              </p>
+              <p class="data">Arise : <span class="value" id="sun_arise_2"> 6am</span></p>
+              <p class="data">Set : <span class="value" id="sun_set_2">5pm</span></p>
             </div>
           </div>
         </section>
@@ -326,8 +279,8 @@
             How accurate is your weather forecast ?
           </div>
           <div class="answer" id="faq-answer-1">
-            Our website utilizes advanced forecasting models and data from
-            reliable sources to provide highly accurate weather forecasts.
+            Our website utilizes advanced forecasting models and data from reliable sources to
+            provide highly accurate weather forecasts.
           </div>
         </div>
 
@@ -336,8 +289,8 @@
             Can I view the weather forecast for multiple locations ?
           </div>
           <div class="answer" id="faq-answer-2">
-            Yes, our website allows you to easily check the weather forecast for
-            multiple locations worldwide.
+            Yes, our website allows you to easily check the weather forecast for multiple locations
+            worldwide.
           </div>
         </div>
 
@@ -346,9 +299,8 @@
             Does your website provide real-time weather updates ?
           </div>
           <div class="answer" id="faq-answer-3">
-            Absolutely! Our app continuously fetches the latest weather data,
-            ensuring you receive real-time updates on temperature, humidity,
-            precipitation, cloud and more.
+            Absolutely! Our app continuously fetches the latest weather data, ensuring you receive
+            real-time updates on temperature, humidity, precipitation, cloud and more.
           </div>
         </div>
 
@@ -357,9 +309,8 @@
             Can I access historical weather data through your website ?
           </div>
           <div class="answer" id="faq-answer-4">
-            Unfortunately, our website currently focuses on providing current
-            and future weather forecasts and does not support historical weather
-            data.
+            Unfortunately, our website currently focuses on providing current and future weather
+            forecasts and does not support historical weather data.
           </div>
         </div>
 
@@ -368,19 +319,17 @@
             Can I check the sunrise and sunset times on your website ?
           </div>
           <div class="answer" id="faq-answer-5">
-            Yes, our website displays accurate sunrise and sunset times for your
-            location, helping you plan your day accordingly.
+            Yes, our website displays accurate sunrise and sunset times for your location, helping
+            you plan your day accordingly.
           </div>
         </div>
 
         <div class="question-box">
           <div class="question" onclick="toggleAnswer(6)">
-            Is your weather website free to use, or does it require a
-            subscription ?
+            Is your weather website free to use, or does it require a subscription ?
           </div>
           <div class="answer" id="faq-answer-6">
-            Our weather website is absolutely free , you can access all weather
-            information.
+            Our weather website is absolutely free , you can access all weather information.
           </div>
         </div>
 
@@ -389,18 +338,19 @@
             Can I view the weather forecast for international locations ?
           </div>
           <div class="answer" id="faq-answer-7">
-            Yes, our website provides weather forecasts for international
-            locations across the globe.
+            Yes, our website provides weather forecasts for international locations across the
+            globe.
           </div>
         </div>
       </section>
     </main>
 
-    
     <!-- Footer Section -->
     <footer>
       <div class="footer">
-        copyright © 2023 <a href="https://karansencha.com" target="_blank" title="Founder & Owner">Karan Sencha</a> | All rights reserved.
+        copyright © 2023
+        <a href="https://karansencha.com" target="_blank" title="Founder & Owner">Karan Sencha</a> |
+        All rights reserved.
       </div>
     </footer>
     <!-- Java Script  -->

@@ -1,20 +1,33 @@
-body {
+* {
   margin: 0;
-  background-color: #eee;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
   background: linear-gradient(90deg, rgba(0, 153, 255, 0.744) 0%, rgb(191, 0, 255) 100%);
-  /* background: linear-gradient(90deg, hsla(307, 59%, 66%, 1) 0%, hsla(297, 56%, 45%, 1) 0%, hsla(307, 100%, 77%, 1) 0%, hsla(192, 81%, 59%, 1) 100%);
+}
 
-  background: linear-gradient(90deg, hsla(307, 59%, 66%, 1) 0%, hsla(297, 56%, 45%, 1) 0%, hsla(307, 89%, 82%, 1) 0%, hsla(262, 61%, 64%, 1) 100%); */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: hsla(297, 56%, 45%, 1);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsla(192, 81%, 59%, 1);
+  border-radius: 10px;
 }
 
 
-
- #day_1, #day_2 {
-display: none;
+#day_1,
+#day_2 {
+  display: none;
 }
 
-
+.hidden {
+  display: none;
+}
 
 nav {
   background-color: black;
@@ -179,13 +192,13 @@ section h1 {
 
 /* FAQs Section  */
 #faqs {
-padding:20px 0;
+  padding: 20px 0;
 }
 
 #faqs h1 {
-  color:white;
+  color: white;
   display: block;
-  font-size:3rem;
+  font-size: 3rem;
   text-align: center;
 }
 
@@ -211,10 +224,16 @@ padding:20px 0;
   transition: max-height 0.5s linear;
 }
 
+/* Footer  */
 .footer {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   background: #ddd !important;
   color: #141313;
   text-align: center;
-  padding: 50px 0;
+  padding: 80px 0;
+}
+
+.footer a {
+  color: #222;
+  font-weight: 600;
 }
